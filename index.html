@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Research Copilot</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f5f7ff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    header {
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #aab3cc;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: #151c32;
+      border: 1px solid #293452;
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #394665;
+      background: #0d1427;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #f0b90b;
+      color: #111;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .step {
+      background: #0d1427;
+      padding: 14px 8px;
+      text-align: center;
+      border-radius: 10px;
+      color: #b9c2d9;
+      font-size: 13px;
+    }
+
+    .report {
+      display: none;
+      line-height: 1.7;
+    }
+
+    .report h2 {
+      margin-bottom: 15px;
+    }
+
+    .report h3 {
+      margin-top: 18px;
+      margin-bottom: 7px;
+    }
+
+    .report ul {
+      padding-left: 20px;
+      color: #cbd3e7;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #202942;
+      color: #aeb8d0;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      color: #737e99;
+      margin: 25px 0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .workflow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>
