@@ -1,46 +1,138 @@
-# Crypto Research Copilot
+Crypto Research Copilot
 
-An AI-agent prototype for structured crypto project research and analysis.
+«A structured AI-research workflow prototype for organizing crypto project research.»
 
-## Overview
+🚀 Overview
 
-Crypto Research Copilot helps organize research questions into a clear and structured report.
+Crypto Research Copilot is a research-focused prototype that turns a crypto project name into an organized research workflow.
 
-The agent focuses on:
-- Project overview
-- Key things to research
-- Information that should be independently verified
-- Open research questions
+Instead of presenting unstructured information, the prototype breaks research into four stages:
 
-## How It Works
+Plan → Organize → Verify → Report
 
-1. User enters a project name.
-2. The agent creates a structured research plan.
-3. Important information is organized into sections.
-4. The result is presented as a research report.
+The goal is to help users identify what they need to research, what information should be independently verified, and which questions remain unanswered.
 
-## Example
+✨ Features
 
-Input:
+- 🧠 Structured Research Planning
+  Breaks a project into clear research questions and objectives.
 
-Crypto Project X
+- 📚 Research Organization
+  Groups research areas into useful categories such as technology, development, features, and documentation.
 
-Output:
+- 🔎 Verification First
+  Highlights information and claims that should be checked against reliable sources.
 
-- Overview
-- Key Things to Research
-- Things to Verify
-- Open Questions
+- 📄 Organized Research Report
+  Presents the research plan in an easy-to-review format.
 
-## Safety
+- 📱 Responsive Web Interface
+  Designed to work on both desktop and mobile screens.
 
-This project is for informational research only.
+🔄 Workflow
 
-It does not execute trades, manage funds, or provide investment advice.
+Project Name
+     ↓
+🧠 Plan
+     ↓
+📚 Organize
+     ↓
+🔎 Verify
+     ↓
+📄 Report
 
-## Project Structure
+Step 01 — Plan
 
-```text
+Identify the main questions that need to be answered about the selected project.
+
+Step 02 — Organize
+
+Group the research into categories such as:
+
+- Problem & Purpose
+- Technology
+- Development
+- Features
+- Documentation
+- Limitations
+
+Step 03 — Verify
+
+Create a checklist for independently checking important information using reliable sources.
+
+Step 04 — Report
+
+Present the research objective, research areas, verification checklist, and open questions in one structured report.
+
+🌐 Live Demo
+
+Crypto Research Copilot:
+https://imraj5.github.io/
+
+Enter a project name such as "Binance" and click Generate Report to see the prototype workflow.
+
+🛠️ Technology
+
+Current prototype components:
+
+- HTML
+- CSS
+- JavaScript
+- Python
+
+Frontend
+
+"index.html" provides the interactive web interface, workflow visualization, progress animation, and report presentation.
+
+Python Prototype
+
+"app.py" contains the initial Python research-report generator and demonstrates how a project name can be converted into a structured research report.
+
+📁 Project Structure
+
 crypto-research-copilot/
+├── index.html
 ├── app.py
 └── README.md
+
+🎯 Current Prototype Scope
+
+This version demonstrates the research workflow and user experience.
+
+The current web demo does not claim to perform live web research or independently verify real-world project information.
+
+Future versions can connect the workflow to research tools, reliable data sources, and an AI-agent backend.
+
+🔐 Safety & Limitations
+
+This project is designed as an informational research prototype.
+
+It:
+
+- Does not execute trades.
+- Does not manage funds.
+- Does not connect to financial accounts.
+- Does not provide investment advice.
+- Does not guarantee the accuracy of research claims.
+
+Users should independently verify important information using reliable primary and independent sources.
+
+🏗️ Future Development
+
+Potential future improvements include:
+
+- Real AI-powered research generation
+- Source collection and citation
+- Automated claim verification
+- Research history
+- More detailed project analysis
+- Agent-tool integrations
+- Improved report export
+
+🏆 Hackathon Prototype
+
+Crypto Research Copilot is being developed as a hackathon-oriented AI research-agent prototype focused on making crypto project research more structured, transparent, and verification-aware.
+
+---
+
+Crypto Research Copilot · Hackathon Prototype
