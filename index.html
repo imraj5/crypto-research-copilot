@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Crypto Research Copilot</title>
 
   <style>
@@ -14,131 +15,237 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0b1020;
+      background: #080b14;
       color: #f5f7ff;
       min-height: 100vh;
-      padding: 20px;
     }
 
     .container {
-      max-width: 850px;
+      width: 92%;
+      max-width: 1000px;
       margin: auto;
     }
 
     header {
-      padding: 30px 0;
+      padding: 45px 0 30px;
       text-align: center;
     }
 
+    .badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #343c55;
+      border-radius: 30px;
+      color: #f0b90b;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
     h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .gradient {
+      color: #f0b90b;
     }
 
     .subtitle {
-      color: #aab3cc;
-      line-height: 1.6;
+      max-width: 650px;
+      margin: auto;
+      color: #9ba5bd;
+      line-height: 1.7;
     }
 
-    .card {
-      background: #151c32;
-      border: 1px solid #293452;
-      border-radius: 18px;
-      padding: 22px;
-      margin-top: 20px;
+    .main-card {
+      background: #111624;
+      border: 1px solid #252d43;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.25);
     }
 
     label {
       display: block;
-      margin-bottom: 10px;
       font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
     }
 
     input {
-      width: 100%;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #394665;
-      background: #0d1427;
+      flex: 1;
+      min-width: 0;
+      padding: 16px;
+      border-radius: 11px;
+      border: 1px solid #37415c;
+      background: #080d19;
       color: white;
       font-size: 16px;
-      margin-bottom: 14px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #f0b90b;
     }
 
     button {
-      width: 100%;
-      padding: 15px;
+      padding: 16px 22px;
       border: none;
-      border-radius: 10px;
+      border-radius: 11px;
       background: #f0b90b;
       color: #111;
-      font-size: 16px;
       font-weight: bold;
+      font-size: 15px;
       cursor: pointer;
     }
 
     button:hover {
-      opacity: 0.9;
+      transform: translateY(-1px);
     }
 
     .workflow {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 18px;
+      gap: 12px;
+      margin-top: 22px;
     }
 
     .step {
-      background: #0d1427;
-      padding: 14px 8px;
+      padding: 16px 10px;
+      background: #0b101d;
+      border: 1px solid #252e45;
+      border-radius: 12px;
       text-align: center;
-      border-radius: 10px;
-      color: #b9c2d9;
-      font-size: 13px;
+    }
+
+    .step-number {
+      font-size: 12px;
+      color: #f0b90b;
+      margin-bottom: 7px;
+    }
+
+    .step-title {
+      font-weight: bold;
+      font-size: 14px;
     }
 
     .report {
       display: none;
+      margin-top: 22px;
+      background: #111624;
+      border: 1px solid #252d43;
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .report-header {
+      border-bottom: 1px solid #293148;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+
+    .report-header p {
+      color: #8f9ab3;
+      margin-top: 7px;
+    }
+
+    .section {
+      margin-top: 22px;
+    }
+
+    .section h3 {
+      margin-bottom: 9px;
+    }
+
+    .section p,
+    .section li {
+      color: #b8c1d5;
       line-height: 1.7;
     }
 
-    .report h2 {
-      margin-bottom: 15px;
-    }
-
-    .report h3 {
-      margin-top: 18px;
-      margin-bottom: 7px;
-    }
-
-    .report ul {
+    ul {
       padding-left: 20px;
-      color: #cbd3e7;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: #172034;
+      color: #8fd3a8;
+      font-size: 12px;
     }
 
     .note {
-      margin-top: 20px;
-      padding: 12px;
-      border-radius: 8px;
-      background: #202942;
-      color: #aeb8d0;
+      margin-top: 24px;
+      padding: 14px;
+      border-radius: 10px;
+      background: #191f2d;
+      color: #929db5;
       font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .feature {
+      padding: 20px;
+      background: #111624;
+      border: 1px solid #252d43;
+      border-radius: 15px;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      margin-bottom: 7px;
+    }
+
+    .feature p {
+      color: #929db5;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
-      color: #737e99;
-      margin: 25px 0;
+      padding: 30px 0;
+      color: #68728a;
       font-size: 13px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 31px;
+      }
+
+      .input-row {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
       .workflow {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      h1 {
-        font-size: 27px;
+      .features {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -149,4 +256,188 @@
   <div class="container">
 
     <header>
+      <div class="badge">AI RESEARCH AGENT · PROTOTYPE</div>
+
       <h1>
+        Crypto Research <span class="gradient">Copilot</span>
+      </h1>
+
+      <p class="subtitle">
+        A structured research assistant prototype that turns
+        crypto project questions into organized research plans.
+      </p>
+    </header>
+
+    <div class="main-card">
+
+      <label for="project">Research a project</label>
+
+      <div class="input-row">
+        <input
+          id="project"
+          type="text"
+          placeholder="Enter project name..."
+        >
+
+        <button onclick="generateReport()">
+          Generate Report
+        </button>
+      </div>
+
+      <div class="workflow">
+
+        <div class="step">
+          <div class="step-number">STEP 01</div>
+          <div class="step-title">🧠 Plan</div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">STEP 02</div>
+          <div class="step-title">📚 Organize</div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">STEP 03</div>
+          <div class="step-title">🔎 Verify</div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">STEP 04</div>
+          <div class="step-title">📄 Report</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">🧠</div>
+        <h3>Structured Research</h3>
+        <p>
+          Breaks a project into clear research questions
+          and useful information categories.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🔎</div>
+        <h3>Verification First</h3>
+        <p>
+          Highlights claims and information that should
+          be independently verified.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Simple Workflow</h3>
+        <p>
+          Converts an initial project name into an organized
+          research report.
+        </p>
+      </div>
+
+    </div>
+
+    <div id="report" class="report">
+
+      <div class="report-header">
+        <h2 id="reportTitle">Research Report</h2>
+
+        <p>
+          Generated by Crypto Research Copilot prototype
+        </p>
+
+        <span class="status">
+          ● Research workflow complete
+        </span>
+      </div>
+
+      <div class="section">
+        <h3>📌 Project Overview</h3>
+
+        <p>
+          The prototype has created a structured research
+          plan for the selected project.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>🔍 Key Research Areas</h3>
+
+        <ul>
+          <li>What problem does the project solve?</li>
+          <li>What technology does it use?</li>
+          <li>Who develops or maintains it?</li>
+          <li>What are its main features?</li>
+          <li>Where can its documentation be verified?</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>✅ Verification Checklist</h3>
+
+        <ul>
+          <li>Check official documentation.</li>
+          <li>Compare project claims with independent information.</li>
+          <li>Review development activity.</li>
+          <li>Identify important limitations and risks.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>❓ Open Questions</h3>
+
+        <ul>
+          <li>What information is still missing?</li>
+          <li>Which claims require additional verification?</li>
+          <li>What assumptions should be tested?</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>Prototype Notice:</strong>
+        This demo is for informational research only.
+        It does not execute trades, manage funds, connect
+        financial accounts, or provide investment advice.
+      </div>
+
+    </div>
+
+    <footer>
+      Crypto Research Copilot · Hackathon Prototype
+    </footer>
+
+  </div>
+
+  <script>
+    function generateReport() {
+
+      const project =
+        document.getElementById("project").value.trim();
+
+      const report =
+        document.getElementById("report");
+
+      const title =
+        document.getElementById("reportTitle");
+
+      if (!project) {
+        alert("Please enter a project name.");
+        return;
+      }
+
+      title.textContent =
+        "Research Report: " + project;
+
+      report.style.display = "block";
+
+      report.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>
